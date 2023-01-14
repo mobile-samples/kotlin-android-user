@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">android-user</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_edit_user">EditUser</string>
+    <string name="title_activity_user_edit">UserEditActivity</string>
+    <string name="title_activity_user">UserActivity</string>
+    <string name="toggle_menu">\2261</string>
+
+    <!-- authentication -->
+    <string name="status_away">Away</string>
+    <string name="status_available">Available</string>
+    <string name="status_idle">Idle</string>
+    <string name="status_busy">Busy</string>
+    <string name="status_invisible">Invisible</string>
+    <string name="status_changing">Set Status to</string>
+
+
+    <!--    Login form-->
+    <string name="username">User Name</string>
+    <string name="password">Password</string>
+    <string name="passcode">Verification Code</string>
+    <string name="placeholder_username">Enter your username</string>
+    <string name="placeholder_password">Enter your password</string>
+
+    <string name="signin_remember_me">Remember Me</string>
+    <string name="signin_forgot_password">Forgot my Password</string>
+
+    <string name="contact">email</string>
+    <string name="signin">Sign in</string>
+
+    <string name="button_signin">Sign in</string>
+    <string name="button_sigup">Sign up</string>
+    <string name="button_home">Home</string>
+    <string name="button_signout">Sign out</string>
+
+    <string name="msg_account_reactivated">Your account has been reactivated.</string>
+    <string name="msg_password_expired_soon">Your password will be expired in %1$d day(s). Please change your password soon.</string>
+    <string name="fail_authentication">Your username or password is invalid. Please try again.</string>
+    <string name="fail_unexisted_password">The password does not exist in the system. Please contact the administrator.</string>
+    <string name="fail_wrong_password">The password is not correct. Please try again.</string>
+    <string name="fail_expired_password">Your password is expired. Please change your password.</string>
+    <string name="fail_suspended_account">This account is suspended. You are not allowed to sign in. Please contact the administrator.</string>
+    <string name="fail_access_time_locked">You are now allowed to sign in this time. Please contact the administrator.</string>
+    <string name="fail_locked_account">This account is locked. You are not allowed to sign in. Please contact the administrator.</string>
+    <string name="fail_disabled_account">This account is disabled. You are not allowed to sign in. Please contact the administrator.</string>
+
+    <string name="error_required">%1$s is required.</string>
+    <!--    User form-->
+    <string name="user">User</string>
+    <string name="create">Create</string>
+    <string name="edit">Edit</string>
+    <string name="user_id">User Id</string>
+    <string name="display_name">Display Name</string>
+    <string name="person_title">Title</string>
+    <string name="please_select">Please Select</string>
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="position">Position</string>
+    <string name="status">Status</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="save">Save</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="sign_in">Sign in</string>
+
+
+    <!--    navigation drawer -->
+    <string name="navigation_drawer_open">Navigation drawer open</string>
+    <string name="navigation_drawer_close">Navigation drawer close</string>
+    <string name="title_activity_companies">CompaniesActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--    menu overview tab -->
+    <string name="overview">Overview</string>
+    <string name="review">Review</string>
+    <string name="reviews">Reviews</string>
+    <string name="about">about</string>
+    <string name="title_activity_main">MainActivity</string>
+</resources>
