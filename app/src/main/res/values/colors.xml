@@ -38,5 +38,6 @@
     <color name="goldRatingBarColor">#FFD700</color>
 
     <!--    comment,rate item -->
-    <color name="rateItemColor">#F5F5F5</color>
+    <color name="rateItemColor">#999999</color>
+    <color name="backgroundItemPostRateColor">#F5F5F5</color>
 </resources>

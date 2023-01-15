@@ -97,4 +97,6 @@
     <string name="reviews">Reviews</string>
     <string name="about">about</string>
     <string name="title_activity_main">MainActivity</string>
+
+<!--    dialog post rate-->
 </resources>

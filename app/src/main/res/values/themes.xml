@@ -22,7 +22,13 @@
     <style name="Theme.Kotlinandroiduser.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Kotlinandroiduser.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
     <style name="circle">
         <item name="cornerSize">50%</item>
     </style>
+<!--    rating bar-->
+    <style name="RatingBar" parent="Theme.AppCompat">
+    <item name="colorControlNormal">@color/rateItemColor</item>
+    <item name="colorControlActivated">@color/goldRatingBarColor</item>
+</style>
 </resources>

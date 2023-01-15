@@ -7,7 +7,9 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 //import com.example.kotlin_android_user.commons.di.DaggerAppComponent
@@ -23,10 +25,8 @@ import kotlin.math.roundToInt
 @AndroidEntryPoint
 class ReviewFragment : Fragment() {
     private lateinit var binding: FragmentReviewBinding
-//    @Inject
-    private val companyViewModel: CompanyViewModel by viewModels()
-//    @Inject
-    private val companyRateViewModel: CompanyRateViewModel by viewModels()
+    private val companyViewModel: CompanyViewModel by activityViewModels() // activityViewModels for Fragment, viewModels for activity
+    private val companyRateViewModel: CompanyRateViewModel by activityViewModels()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -45,7 +45,7 @@ class ReviewFragment : Fragment() {
                         )
                         binding.rvRatesSummary.layoutManager = LinearLayoutManager(context)
                         binding.rvRatesSummary.adapter =  RateInfoSumAdapter(localDataSet)
-                        val score = (it1.rate.times(100.0)).roundToInt().toFloat()
+                        val score = (it1.rate.times(1.00)).toFloat()
                         binding.tvSumScore.text = score.toString();
                         binding.rbRateSummary.rating = score;
                     }
@@ -65,6 +65,9 @@ class ReviewFragment : Fragment() {
                 };
             }
         }
+        binding.layoutRatesSum.setOnClickListener {
+            binding.rvRatesSummary.isVisible = !binding.rvRatesSummary.isVisible
+        }
     }
 
     override fun onCreateView(
@@ -76,9 +79,4 @@ class ReviewFragment : Fragment() {
         binding = FragmentReviewBinding.inflate(inflater,container,false);
         return binding.root;
     }
-
-//    override fun onAttach(context: Context) {
-//        super.onAttach(context)
-//        (context.applicationContext as App).appComponent.inject(this)
-//    }
 }

@@ -1,4 +1,4 @@
-package com.example.kotlin_android_user.apiservices
+package com.example.kotlin_android_user.company.apiservices
 
 import com.example.kotlin_android_user.commons.models.Rates
 import com.example.kotlin_android_user.commons.models.SearchResult

@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
 import com.example.kotlin_android_user.R
@@ -22,7 +23,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class CompanyFragment : Fragment(R.layout.fragment_company) {
-    private val companyViewModel: CompanyViewModel by viewModels()
+    private val companyViewModel: CompanyViewModel by activityViewModels()
 
     private lateinit var binding:FragmentCompanyBinding
 //    override fun onAttach(context: Context) {
@@ -34,7 +35,7 @@ class CompanyFragment : Fragment(R.layout.fragment_company) {
     ): View? {
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_company, container, false)
-        binding.companyViewModel = companyViewModel;
+        binding.companyViewModel = companyViewModel
         binding.lifecycleOwner = this
         getCompanyById("id1")
         binding.menuPager.adapter= CompanyViewPagerAdapter(this)
@@ -62,7 +63,6 @@ class CompanyFragment : Fragment(R.layout.fragment_company) {
                         resource.data.let { company ->
                             if (company != null) {
                                 companyViewModel.setCompany(company)
-                                companyViewModel.company.value
                                 Glide.with(binding.imgAvatar).load(company.imageURL)
                                     .into(binding.imgAvatar)
                                 Glide.with(binding.imgCoverURL).load(company.coverURL)

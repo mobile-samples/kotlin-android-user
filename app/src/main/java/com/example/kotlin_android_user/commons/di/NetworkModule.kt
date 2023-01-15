@@ -1,7 +1,7 @@
 package com.example.kotlin_android_user.commons.di
 
-import com.example.kotlin_android_user.apiservices.CompanyApiService
-import com.example.kotlin_android_user.apiservices.CompanyRateApiService
+import com.example.kotlin_android_user.company.apiservices.CompanyApiService
+import com.example.kotlin_android_user.company.apiservices.CompanyRateApiService
 import com.example.kotlin_android_user.config.Config
 import dagger.Module
 import dagger.Provides
@@ -17,7 +17,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class NetworkModule {
+object NetworkModule {
     @Singleton
     @Provides
     fun provideRetrofitBuilder(okBuilder: OkHttpClient.Builder): Retrofit.Builder {
@@ -54,7 +54,7 @@ class NetworkModule {
     }
     @Provides
     @Singleton
-    fun provideCompanyRateApi(retrofit: Retrofit):CompanyRateApiService{
+    fun provideCompanyRateApi(retrofit: Retrofit): CompanyRateApiService {
         return retrofit.create(CompanyRateApiService::class.java)
     }
 }
