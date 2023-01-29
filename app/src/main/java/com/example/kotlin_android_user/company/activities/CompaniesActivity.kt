@@ -9,7 +9,6 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class CompaniesActivity:AppCompatActivity(){
-//    @Inject
     private val companyViewModel: CompanyViewModel by viewModels()
 
 }

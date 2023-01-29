@@ -30,6 +30,7 @@ class CompanyFragment : Fragment(R.layout.fragment_company) {
 //        super.onAttach(context)
 //        (context.applicationContext as App).appComponent.inject(this)
 //    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
@@ -57,7 +58,6 @@ class CompanyFragment : Fragment(R.layout.fragment_company) {
 
         companyViewModel.load(id).observe(viewLifecycleOwner) {
             it.let { resource ->
-
                 when (resource.status) {
                     Status.SUCCESS -> {
                         resource.data.let { company ->

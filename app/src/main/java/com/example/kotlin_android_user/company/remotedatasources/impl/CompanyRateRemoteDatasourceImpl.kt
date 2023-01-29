@@ -11,8 +11,8 @@ class CompanyRateRemoteDatasourceImpl
     override suspend fun search(): SearchResult<Rates>? = apiService.search()
 
 
-    override suspend fun rate(rates: Rates): Int? {
-        return apiService.rate(rates);
+    override suspend fun rate(id: String, author: String, rates: Rates): Int? {
+        return apiService.rate(id,author,rates);
     }
 
 }

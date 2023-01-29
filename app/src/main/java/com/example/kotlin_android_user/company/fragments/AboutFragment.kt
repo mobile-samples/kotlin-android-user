@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.kotlin_android_user.company.repositories.CompanyRepository
+import com.example.kotlin_android_user.company.repositories.impl.CompanyRepositoryImpl
 import com.example.kotlin_android_user.databinding.FragmentAboutBinding
 
 public class AboutFragment : Fragment() {

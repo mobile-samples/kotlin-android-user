@@ -30,7 +30,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".company.activities.CompaniesActivity"
+            android:label="@string/title_activity_companies">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:exported="true"
+            android:name=".film.activities.FilmsActivity"
+            android:label="@string/title_activity_films">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
 
     </application>
 

@@ -26,9 +26,29 @@
     <style name="circle">
         <item name="cornerSize">50%</item>
     </style>
-<!--    rating bar-->
+    <!--    rating bar-->
     <style name="RatingBar" parent="Theme.AppCompat">
-    <item name="colorControlNormal">@color/rateItemColor</item>
-    <item name="colorControlActivated">@color/goldRatingBarColor</item>
-</style>
+        <item name="colorControlNormal">@color/controlNormalColor</item>
+        <item name="colorControlActivated">@color/goldRatingBarColor</item>
+    </style>
+    <!-- text review input   -->
+    <style name="TextReviewInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/borderReviewInputColor</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="boxBackgroundColor">@color/white</item>
+    </style>
+
+    <!--    btn save-->
+    <style name="btn_save" parent="ThemeOverlay.Material3.Button.ElevatedButton">
+        <item name="textAllCaps">false</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="backgroundTint">@color/primary_200</item>
+        <item name="shapeAppearanceOverlay">@style/buttonShapeAppearance</item>
+    </style>
+    <style name="buttonShapeAppearance">
+        <item name="cornerSizeTopLeft">50%</item>
+        <item name="cornerSizeBottomLeft">50%</item>
+        <item name="cornerSizeBottomRight">50%</item>
+        <item name="cornerSizeTopRight">50%</item>
+    </style>
 </resources>

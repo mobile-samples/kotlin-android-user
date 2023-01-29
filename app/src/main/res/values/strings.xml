@@ -95,8 +95,14 @@
     <string name="overview">Overview</string>
     <string name="review">Review</string>
     <string name="reviews">Reviews</string>
-    <string name="about">about</string>
+    <string name="about">About</string>
     <string name="title_activity_main">MainActivity</string>
 
 <!--    dialog post rate-->
+    <string name="post">Post</string>
+
+<!--   film -->
+    <string name="film">Film</string>
+    <string name="title_activity_films">FilmActivity</string>
+
 </resources>

@@ -3,10 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/companyFragment">
+    app:startDestination="@id/filmsActivity">
     <fragment
         android:id="@+id/companyFragment"
         android:name="com.example.kotlin_android_user.company.fragments.CompanyFragment"
         android:label="fragment_company"
         tools:layout="@layout/fragment_company" />
+    <activity
+        tools:layout="@layout/activity_films"
+        android:id="@+id/filmsActivity"
+        android:name="com.example.kotlin_android_user.film.activities.FilmsActivity"
+        android:label="FilmsActivity" />
 </navigation>

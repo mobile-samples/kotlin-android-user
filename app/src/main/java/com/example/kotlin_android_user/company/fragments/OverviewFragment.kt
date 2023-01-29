@@ -17,6 +17,7 @@ class OverviewFragment : Fragment() {
         val binding: FragmentOverviewBinding =
             FragmentOverviewBinding.inflate(inflater, container, false)
         binding.tvOverview.text = "Overview";
+
         return binding.root
     }
 }

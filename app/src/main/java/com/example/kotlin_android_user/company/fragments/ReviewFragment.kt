@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
+import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
@@ -34,8 +35,6 @@ class ReviewFragment : Fragment() {
             it.info.let {it1->
                 run {
                     if (it1 != null) {
-                        Log.d(TAG,companyViewModel.company.value.toString())
-
                         val localDataSet = listOf(
                             RateCriteriaItem(it1.rate1, "Job Work/Life Balance"),
                             RateCriteriaItem(it1.rate2, "Compensation/Benefits"),
@@ -68,8 +67,16 @@ class ReviewFragment : Fragment() {
         binding.layoutRatesSum.setOnClickListener {
             binding.rvRatesSummary.isVisible = !binding.rvRatesSummary.isVisible
         }
+        binding.btnReview.setOnClickListener{
+            showDialog()
+        }
     }
 
+    public fun showDialog(){
+
+        val postRateDialogFragment= PostRateDialogFragment("id1","h3-bIa9tp",companyViewModel.company.value?.name?:"")
+        postRateDialogFragment.show(childFragmentManager,PostRateDialogFragment.TAG)
+    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

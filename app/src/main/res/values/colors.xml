@@ -7,8 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="primary_200">#008577</color>
-    <color name="primary">#4DB6AC</color>
+    <color name="primary_200">#4db6ac</color>
+    <color name="primary">#008577</color>
     <color name="primary_700">#00574b</color>
     <color name="sub">#B3B3B3</color>
 
@@ -31,13 +31,16 @@
     <!--    Tab Item Menu-->
     <color name="tabItemMenuTextColor">#007bff</color>
 
-    <!--    color bottom highlight-->
+    <!--    Color bottom highlight-->
     <color name="highlightColor">#cdba11</color>
 
     <!--    Rating bar -->
     <color name="goldRatingBarColor">#FFD700</color>
-
+    <color name="controlNormalColor">#999999</color>
+<!--    Border review text input color-->
+    <color name="borderReviewInputColor">#EDEDED</color>
     <!--    comment,rate item -->
-    <color name="rateItemColor">#999999</color>
+    <color name="rateItemColor">#F5F5F5</color>
+<!--    #999999-->
     <color name="backgroundItemPostRateColor">#F5F5F5</color>
 </resources>

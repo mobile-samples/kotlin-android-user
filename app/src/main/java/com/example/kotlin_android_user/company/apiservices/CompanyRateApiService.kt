@@ -12,5 +12,5 @@ interface CompanyRateApiService {
     suspend fun search(): SearchResult<Rates>?
 
     @POST(Config.company_rate_url + "/{id}/{author}")
-    suspend fun rate(obj: Rates): Int?
+    suspend fun rate(id:String, author:String ,obj: Rates): Int?
 }

@@ -12,7 +12,7 @@ class CompanyRateRepositoryImpl @Inject constructor(val companyRateRemoteDatasou
         return companyRateRemoteDatasource.search();
     }
 
-    override suspend fun rate(id: String, author: String, obj: Rates): Int {
-        TODO("Not yet implemented")
+    override suspend fun rate(id: String, author: String, obj: Rates): Int? {
+        return companyRateRemoteDatasource.rate(id,author,obj);
     }
 }

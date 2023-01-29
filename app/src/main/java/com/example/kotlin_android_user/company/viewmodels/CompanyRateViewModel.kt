@@ -15,8 +15,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class CompanyRateViewModel @Inject constructor(private val companyRateRepository: CompanyRateRepository):ViewModel() {
-    private val _searchResult = MutableLiveData<SearchResult<Rates>?>()
-    val searchResult:LiveData<SearchResult<Rates>?> = _searchResult
+    private val _searchResult = MutableLiveData<SearchResult<Rates>?>() //setter
+    val searchResult:LiveData<SearchResult<Rates>?> = _searchResult // getter
     fun search() = liveData(Dispatchers.IO){
         emit(Resource.loading(null))
         try {
@@ -27,5 +27,14 @@ class CompanyRateViewModel @Inject constructor(private val companyRateRepository
     }
     fun setSearchResult(res:SearchResult<Rates>?){
         _searchResult.value = res
+    }
+
+    fun rate(id:String,author:String,rates:Rates) = liveData(Dispatchers.IO) {
+        emit(Resource.loading(null))
+        try {
+            emit(Resource.success(companyRateRepository.rate(id,author,rates)))
+        }catch (exception:Exception){
+            emit(Resource.error(null,exception.message))
+        }
     }
 }
